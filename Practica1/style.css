@@ -1,0 +1,105 @@
+/*** Reseteo de Propiedades ***/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;/*** Esto es para que si hay padding y border se incluya dentro del calculo (no se salga si pongo el % ajustado sin tener que tener en cuenta bordes)***/
+}
+
+
+/************ LAYOUT  ************/
+/************************ display/position/float **********************/
+#headerIZQ{
+    position: relative;
+    float: left;
+}
+#headerDCHA{
+    position: relative;
+    float: right;
+}
+
+nav ul li{
+    position:relative;
+    display: inline-block;
+}
+nav ul li a{
+    position:relative;
+    float: left;
+}
+#aula{
+    position: relative;
+    float: right;
+}
+
+
+
+/****************** height/width/padding/border/margin *******************/
+header{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+/************ STYLE  ************/
+
+/************************* Propiedades Generales *********************/
+a{  /*a:link, a:visited, a:active*/
+    text-decoration: none;
+    color: #555555;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight:bold;
+}
+ul{
+    list-style-type: none;
+}
+img, picture, video, iframe, figure{
+    max-width: 100%;
+    object-fit:cover; /* En el caso de poner altura a una imagen hace que se escale */
+}
+
+
+/********* BODY *********/
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(#004eb3, #88ade8);
+}
+
+
+
+
+/*** HEADER ***/
+
+
+/* Barra de búsqueda */
+#barra{
+    position: relative;
+    right: 40%;
+    top: 50px;
+}
+#barra{
+    width: 20%;
+    margin: auto;
+    height: 2em;
+}
+#barra{
+    background-color: #044979;
+    border: solid 1px #1777a5;
+    color: white;
+    padding: 0 .7%;
+    border-radius: 1em;
+}
+
+
+/********* NAV **********/
+
+/********* MAIN *********/
+
+/******** FOOTER *********/
+
+
+
+

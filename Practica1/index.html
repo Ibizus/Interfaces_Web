@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
     <title>IES Vega de Mijas</title>
 </head>
 <body>
-    <main>
-        <header>
-            <section id="headerIZQ">
-                <h1>I.E.S. Vega de Mijas</h1>
-                <p>Dpto. de Informática</p>
-            </section>
-            <section id="headerDCHA">
-                <img src="" alt="barra de busqueda" />
-                <img src="" alt="lupa" />
-            </section>
-        </header>
+    <header>
+        <section id="headerIZQ">
+            <h1>I.E.S. Vega de Mijas</h1>
+            <p>Dpto. de Informática</p>
+        </section>
 
+        <section id="headerDCHA">
+            <form id="buscar" action="" novalidate>
+                <input id="barra" type="text" placeholder="buscar">
+            </form>
+            <img src="images/bg-submit.gif" alt="lupa" />
+        </section>
         <nav>
             <ul>
                 <li><a href="">SMR1</a></li>
                 <li><a href="">SMR2</a></li>
                 <li><a href="">DAW1</a></li>
                 <li><a href="">DAW2</a></li>
-                <li><a href="">Aula virtual</a></li>
+                <li><a id="aula" href="">Aula virtual</a></li>
             </ul>
         </nav>
+    </header>
 
+    <main>
         <section id="fotoInicio">
             <p>Desarrollo de Aplicaciones Web</p>
+            <img src="images/bg-logo.jpg" alt="fachada instituto">
         </section>
 
         <section id="principal">
@@ -91,27 +95,54 @@
             </article>
 
             <article id="miniaturas">
-                
+                <img src="images/image.jpg" alt="">
+                <img src="images/image.jpg" alt="">
+                <img src="images/image.jpg" alt="">
+                <img src="images/image.jpg" alt="">
+                <img src="images/image.jpg" alt="">
+                <img src="images/image.jpg" alt="">
             </article>
         </section>
 
         <aside>
             <article id="contacto">
-
+                <h3>I.E.S. Vega de Mijas:</h3>
+                <img src="images/profile.jpg" alt="puerta instituto">
+                <p>
+                    Calle Antonio Moreno García, 5
+                    Mijas-costa (29651)
+                    Málaga
+                </p>
+                <p>
+                    Tel: 951 268 758
+                    Fax: 951 268 758
+                    email: email@email.com
+                </p>
             </article>
 
             <article id="categorias">
-
+                <ul>
+                    <li><a href="">Sistemas Operativos</a></li>
+                    <li><a href="">Redes</a></li>
+                    <li><a href="">Programación</a></li>
+                    <li><a href="">Hardware</a></li>
+                    <li><a href="">Desarrollo web</a></li>
+                </ul>
             </article>
 
             <article id="archivo">
-
+                <ul>
+                    <li><a href="">Octubre 2012</a></li>
+                    <li><a href="">Septiembre 2012</a></li>
+                    <li><a href="">Agosto 2012</a></li>
+                    <li><a href="">Julio 2012</a></li>
+                    <li><a href="">Junio 2012</a></li>
+                </ul>
             </article>
         </aside>
-
-        <footer>
-
-        </footer>
     </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
