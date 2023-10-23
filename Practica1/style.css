@@ -7,19 +7,26 @@
 
 
 /************ LAYOUT  ************/
-/************************ display/position/float **********************/
-/****************** height/width/padding/border/margin *******************/
+/************* display/position/float **************/
+/******* height/width/padding/border/margin ********/
 
+/********* BODY *********/
+header, main, footer{
+    margin: auto;
+    width: 100%;
+    max-width: 760px;
+    min-width: 760px;
+}
+/*** HEADER ***/
 header{
     position: relative;
     float: center;
-    border: solid wheat 1px;
+    padding-top: 80px;
 }
 #headerIZQ{
     position: relative;
     float: left;
     padding-left: 20px;
-    border: solid yellow 1px;
 }
 #headerIZQ p{
     margin-bottom: 10px;
@@ -30,102 +37,98 @@ header{
     width: 30%;
     padding-right: 10px;
     padding-top: 20px;
-    border: solid yellow 1px;
 }
 #barra{
     position: relative;
     float: left;
     width: 80%;
-    padding-left: 5%;
+    padding: 1% 5%;
 }
+/********* NAV **********/
 nav{
     position: relative;
     float: left;
-    border: solid green 1px;
     width: 100%;
-}
-
-
-/*
-nav{
-    float: right;
-    width: 50%;
-    margin: 2%;
-    padding: 0 2%;
 }
 nav ul li{
     display: inline-block;
-    margin-left: 1.5%;
-    padding: 2% 1.2%;
-}
-
-
-
-nav ul{
-    width: 100%;
-    border: solid yellow 1px;
-}
-*/
-nav ul li{
-    display: inline-block;
-    padding: 1% 4%;
-    border: solid orangered 1px;
+    padding: 1.5% 3.5%;
 }
 nav ul #aula{
     position: relative;
     float: right;
 }
+/********* MAIN *********/
+
+/******* Portada *******/
+/*#fotoInicio{
+    margin-bottom: 5px; /********* margen *********/ /*
+}*/
 #fotoInicio p{
     position: absolute;
-    margin-top: 50px;
+    margin-top: 65px;
     margin-left: 30px;
 }
+/******* Articulos *******/
 #principal{
     position: relative;
     float: left;
-    width: 67%;
-    border: solid green 1px;
+    width: 70%;
+}
+#principal article:not(#p_ppal), #principal section{
+    padding: 4% 3%;
+}
+#ppal_izq, #ppal_dcha{
+    position: relative;
+    float: left;
+    width: 50%;
+}
+#principal time, #principal ul li{
+    position: relative;
+    float: left;
+    padding-top: 4px;
+}
+#principal ul li{
+    margin: 0 0.5%;
 }
 #artPpal{
     position: relative;
     float: left;
     width: 100%;
+    margin-left: 15px;
 }
-#art1{
+#p_ppal p{
     position: relative;
     float: left;
-    width: 50%;
+    width: 100%;
+    padding: 5%;
 }
-#art2{
+#art1, #art2, #art3{
     position: relative;
     float: left;
-    width: 50%;
+    width: 100%;
 }
-#art3{
+#art4, #miniaturas{
     position: relative;
     float: left;
-    width: 50%;
+    width: 100%;
 }
-#art4{
-    position: relative;
-    float: right;
-    width: 50%;
+#miniaturas img{
+    margin: 1%;
 }
-#miniaturas{
-    position: relative;
-    float: right;
-    width: 50%;
-}
+
+/********* ASIDE *********/
 aside{
     position: relative;
     float: right;
-    width: 33%;
+    width: 30%;
     border: solid red 1px;
 }
+/******** FOOTER *********/
 footer{
-    height: 70px;
     position: relative;
     float: left;
+    padding: 20px;
 }
 #foot1{
     position: relative;
@@ -137,26 +140,8 @@ footer{
 }
 
 
-header{
-    padding-top: 100px;
-}
-header, main, footer{
-    margin: auto;
-    width: 100%;
-    max-width: 760px;
-    min-width: 760px;
-}
-nav{
-    padding: 20px;
-}
-
-
-
-
-
 /************ STYLE  ************/
-
-/************************* Propiedades Generales *********************/
+/******************** Propiedades Generales *****************/
 a{  /*a:link, a:visited, a:active*/
     text-decoration: none;
 }
@@ -174,18 +159,12 @@ img, picture, video, iframe, figure{
     object-fit:cover; /* En el caso de poner altura a una imagen hace que se escale */
 }
 
-
 /********* BODY *********/
 body{
     font-family:Verdana, Tahoma, sans-serif;
     background: linear-gradient(#004eb3, #88ade8);
 }
-
-
-
-
 /*** HEADER ***/
-
 #headerIZQ h1{
     color: white;
     font-size: xx-large;
@@ -195,23 +174,21 @@ body{
     font-size: smaller;
     margin-bottom: 10px;
 }
-
-
-
 /* Barra de búsqueda */
-
 #lupa{
     position: relative;
     float: right;
-}    
+}
 #barra{
-    background-color: #044979;
+    background-color: #044979; /*#136188*/
     border: solid 1px #1777a5;
     color: white;
     border-radius: 1em;
 }
-
-
+input::placeholder {
+    font-size: larger;
+    color: #b4e2f0;
+}
 /********* NAV **********/
 nav{
     background-color: #0f2132;
@@ -220,15 +197,11 @@ nav{
 nav ul :hover{
     background-color: #0a1520;
 }
-nav ul li{
-    
-}
 nav a{
     color: white;
     font-size: smaller;
     font-weight: bold;
 }
-
 /********* MAIN *********/
 main{
     background-color: white;
@@ -236,10 +209,83 @@ main{
 }
 #fotoInicio p{
     color: #0f2132;
+    font-size: larger;
 }
-#artPpal p{
-    background-color: #ecf8ff;
+.title{
+    color: #136188;
 }
+#principal{
+    color: #6e7273;
+}
+#principal p:not(.guion){
+    font-size: small;
+    line-height: 1.6;
+}
+#p_ppal p{
+    background-color: #ecf8ff; /*#ecf8ff*/
+    color: #136188;
+    font-size: small;
+}
+#principal time, #principal ul li{
+    font-size: x-small;
+}
+#principal time{
+    color: #1aa4ee;
+    font-weight: bold;
+}
+#principal ul li{
+    color: #408020;
+}
+#principal ul li a{
+    color: #408020;
+    text-decoration: underline;
+}
+/*
+#art1, #art2, #art3, #art4{
+    color: #6e7273;
+}
+
+/********* ASIDE *********/
+aside #contacto{
+    font-size: 0.7em;
+    font-weight: 600;
+    line-height: 1.6;
+}
+aside #categorias, aside #archivo{
+    font-size: 0.8em;
+    line-height: 2;
+}
+aside h3{
+    font-size: large;
+    margin-bottom: 20px;
+}
+#contacto, #categorias, #archivo{
+    padding: 5%;
+}
+#contacto img{
+    float: left;
+    height: 50px;
+    padding: 2% 2% 4% 2%;
+    margin-right: 5px;
+    margin-bottom: 50px;
+    border: #5bc0e9 solid 1px;
+}
+.title_aside{
+    color: #408020;
+}
+#direccion{
+    margin-bottom: 10px;
+}
+aside li{
+    color: #136188;
+    text-decoration: underline;
+}
+aside a{
+    color: #136188;
+    margin-left: 10px;
+}
+
+
 
 /******** FOOTER *********/
 footer{
@@ -247,6 +293,3 @@ footer{
     color: #5a8da6;
     border: solid greenyellow 1px;
 }
-
-
-
