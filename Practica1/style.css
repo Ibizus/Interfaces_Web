@@ -13,17 +13,30 @@
 header{
     position: relative;
     float: center;
-    /*border: solid wheat 1px;*/
+    border: solid wheat 1px;
 }
 #headerIZQ{
     position: relative;
     float: left;
+    padding-left: 20px;
     border: solid yellow 1px;
+}
+#headerIZQ p{
+    margin-bottom: 10px;
 }
 #headerDCHA{
     position: relative;
     float: right;
+    width: 30%;
+    padding-right: 10px;
+    padding-top: 20px;
     border: solid yellow 1px;
+}
+#barra{
+    position: relative;
+    float: left;
+    width: 80%;
+    padding-left: 5%;
 }
 nav{
     position: relative;
@@ -31,15 +44,34 @@ nav{
     border: solid green 1px;
     width: 100%;
 }
+
+
+/*
+nav{
+    float: right;
+    width: 50%;
+    margin: 2%;
+    padding: 0 2%;
+}
 nav ul li{
-    position:relative;
     display: inline-block;
+    margin-left: 1.5%;
+    padding: 2% 1.2%;
 }
-nav ul li a{
-    position:relative;
-    float: left;
+
+
+
+nav ul{
+    width: 100%;
+    border: solid yellow 1px;
 }
-#aula{
+*/
+nav ul li{
+    display: inline-block;
+    padding: 1% 4%;
+    border: solid orangered 1px;
+}
+nav ul #aula{
     position: relative;
     float: right;
 }
@@ -127,7 +159,9 @@ nav{
 /************************* Propiedades Generales *********************/
 a{  /*a:link, a:visited, a:active*/
     text-decoration: none;
-
+}
+a:link, a:visited, a:active{
+    text-decoration: none;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight:bold;
@@ -143,7 +177,7 @@ img, picture, video, iframe, figure{
 
 /********* BODY *********/
 body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Tahoma, sans-serif;
     background: linear-gradient(#004eb3, #88ade8);
 }
 
@@ -151,19 +185,21 @@ body{
 
 
 /*** HEADER ***/
+
 #headerIZQ h1{
     color: white;
+    font-size: xx-large;
 }
 #headerIZQ p{
     color: #5bc0e9;
+    font-size: smaller;
+    margin-bottom: 10px;
 }
+
 
 
 /* Barra de búsqueda */
-#barra{
-    position: relative;
-    float: left;
-}
+
 #lupa{
     position: relative;
     float: right;
@@ -173,8 +209,6 @@ body{
     border: solid 1px #1777a5;
     color: white;
     border-radius: 1em;
-    width: 80%;
-    padding-left: 5%;
 }
 
 
@@ -183,9 +217,18 @@ nav{
     background-color: #0f2132;
     color: white;
 }
+nav ul :hover{
+    background-color: #0a1520;
+}
+nav ul li{
+    
+}
 nav a{
     color: white;
+    font-size: smaller;
+    font-weight: bold;
 }
+
 /********* MAIN *********/
 main{
     background-color: white;
@@ -194,6 +237,10 @@ main{
 #fotoInicio p{
     color: #0f2132;
 }
+#artPpal p{
+    background-color: #ecf8ff;
+}
+
 /******** FOOTER *********/
 footer{
     background-color: #0f2132;
