@@ -122,7 +122,7 @@ aside{
     position: relative;
     float: right;
     width: 30%;
-    border: solid red 1px;
+    padding-left: 2%;
 }
 /******** FOOTER *********/
 footer{
@@ -222,7 +222,7 @@ main{
     line-height: 1.6;
 }
 #p_ppal p{
-    background-color: #ecf8ff; /*#ecf8ff*/
+    background-color: #ecf8ff;
     color: #136188;
     font-size: small;
 }
@@ -239,10 +239,6 @@ main{
 #principal ul li a{
     color: #408020;
     text-decoration: underline;
-}
-/*
-#art1, #art2, #art3, #art4{
-    color: #6e7273;
 }
 
 /********* ASIDE *********/
@@ -291,5 +287,4 @@ aside a{
 footer{
     background-color: #0f2132;
     color: #5a8da6;
-    border: solid greenyellow 1px;
 }
