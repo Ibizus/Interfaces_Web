@@ -8,15 +8,29 @@
 
 /************ LAYOUT  ************/
 /************************ display/position/float **********************/
+/****************** height/width/padding/border/margin *******************/
+
+header{
+    position: relative;
+    float: center;
+    /*border: solid wheat 1px;*/
+}
 #headerIZQ{
     position: relative;
     float: left;
+    border: solid yellow 1px;
 }
 #headerDCHA{
     position: relative;
     float: right;
+    border: solid yellow 1px;
 }
-
+nav{
+    position: relative;
+    float: left;
+    border: solid green 1px;
+    width: 100%;
+}
 nav ul li{
     position:relative;
     display: inline-block;
@@ -29,15 +43,80 @@ nav ul li a{
     position: relative;
     float: right;
 }
-
-
-
-/****************** height/width/padding/border/margin *******************/
-header{
-    margin-top: 100px;
+#fotoInicio p{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+#principal{
+    position: relative;
+    float: left;
+    width: 67%;
+    border: solid green 1px;
+}
+#artPpal{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+#art1{
+    position: relative;
+    float: left;
+    width: 50%;
+}
+#art2{
+    position: relative;
+    float: left;
+    width: 50%;
+}
+#art3{
+    position: relative;
+    float: left;
+    width: 50%;
+}
+#art4{
+    position: relative;
+    float: right;
+    width: 50%;
+}
+#miniaturas{
+    position: relative;
+    float: right;
+    width: 50%;
+}
+aside{
+    position: relative;
+    float: right;
+    width: 33%;
+    border: solid red 1px;
+}
+footer{
+    height: 70px;
+    position: relative;
+    float: left;
+}
+#foot1{
+    position: relative;
+    float: left;
+}
+#foot2{
+    position: relative;
+    float: right;
 }
 
 
+header{
+    padding-top: 100px;
+}
+header, main, footer{
+    margin: auto;
+    width: 100%;
+    max-width: 760px;
+    min-width: 760px;
+}
+nav{
+    padding: 20px;
+}
 
 
 
@@ -48,7 +127,7 @@ header{
 /************************* Propiedades Generales *********************/
 a{  /*a:link, a:visited, a:active*/
     text-decoration: none;
-    color: #555555;
+
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight:bold;
@@ -72,34 +151,55 @@ body{
 
 
 /*** HEADER ***/
+#headerIZQ h1{
+    color: white;
+}
+#headerIZQ p{
+    color: #5bc0e9;
+}
 
 
 /* Barra de búsqueda */
 #barra{
     position: relative;
-    right: 40%;
-    top: 50px;
+    float: left;
 }
-#barra{
-    width: 20%;
-    margin: auto;
-    height: 2em;
-}
+#lupa{
+    position: relative;
+    float: right;
+}    
 #barra{
     background-color: #044979;
     border: solid 1px #1777a5;
     color: white;
-    padding: 0 .7%;
     border-radius: 1em;
+    width: 80%;
+    padding-left: 5%;
 }
 
 
 /********* NAV **********/
-
+nav{
+    background-color: #0f2132;
+    color: white;
+}
+nav a{
+    color: white;
+}
 /********* MAIN *********/
-
+main{
+    background-color: white;
+    overflow: hidden;
+}
+#fotoInicio p{
+    color: #0f2132;
+}
 /******** FOOTER *********/
-
+footer{
+    background-color: #0f2132;
+    color: #5a8da6;
+    border: solid greenyellow 1px;
+}
 
 
 
