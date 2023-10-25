@@ -5,7 +5,6 @@
     box-sizing: border-box;/*** Esto es para que si hay padding y border se incluya dentro del calculo (no se salga si pongo el % ajustado sin tener que tener en cuenta bordes)***/
 }
 
-
 /************ LAYOUT  ************/
 /************* display/position/float **************/
 /******* height/width/padding/border/margin ********/
@@ -14,8 +13,8 @@
 header, main, footer{
     margin: auto;
     width: 100%;
-    max-width: 760px;
-    min-width: 760px;
+    max-width: 1200px;
+    min-width: 620px;
 }
 /*** HEADER ***/
 header{
@@ -61,13 +60,20 @@ nav ul #aula{
 /********* MAIN *********/
 
 /******* Portada *******/
-/*#fotoInicio{
-    margin-bottom: 5px; /********* margen *********/ /*
-}*/
+#fotoInicio{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+#fotoInicio img{
+    position: relative;
+    float: right;
+}
 #fotoInicio p{
     position: absolute;
     margin-top: 65px;
     margin-left: 30px;
+    z-index: 50;
 }
 /******* Articulos *******/
 #principal{
@@ -145,9 +151,6 @@ footer{
 a{  /*a:link, a:visited, a:active*/
     text-decoration: none;
 }
-a:link, a:visited, a:active{
-    text-decoration: none;
-}
 h1, h2, h3, h4, h5, h6 {
     font-weight:bold;
 }
@@ -207,6 +210,9 @@ main{
     background-color: white;
     overflow: hidden;
 }
+#fotoInicio{
+    background: linear-gradient(#b3c9f0, #ffffff);
+}
 #fotoInicio p{
     color: #0f2132;
     font-size: larger;
@@ -263,8 +269,12 @@ aside h3{
     height: 50px;
     padding: 2% 2% 4% 2%;
     margin-right: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     border: #5bc0e9 solid 1px;
+}
+#telefono a{
+    color: black;
+    text-decoration: underline;
 }
 .title_aside{
     color: #408020;
