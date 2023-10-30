@@ -12,14 +12,26 @@
 /********* BODY *********/
 
 /****** CONTAINER *******/
-
+#contenedor{
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
 /******** HEADER ********/
-
+header, aside, #servicios, footer{
+    margin-bottom: 20px;
+}
 /********* MAIN *********/
 
 /********* ASIDE ********/
 
 /******** FOOTER ********/
+
+
+
+
+
+
 
 
 /************ STYLE  ************/
@@ -27,14 +39,47 @@
 
 /********* BODY *********/
 body{
-    background: linear-gradient(#ff5e62, #ff9966);
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    color: white;
 }
 /****** CONTAINER *******/
-
+#contenedor{
+    background-color: white;
+}
 /******** HEADER ********/
-
+header{
+    background-color: #03a9f4;
+}
+nav a{ /*a:link, a:visited, a:active*/
+    text-decoration: none;
+    color: white;
+}
+nav ul li{
+    position: relative;
+    display: inline-block;
+}
 /********* MAIN *********/
-
+#servicio1{
+    background-color: #e53935;
+}
+#servicio2{
+    background-color: #8e24aa;
+}
+#servicio3{
+    background-color: #3f51b5;
+}
 /********* ASIDE ********/
-
+aside{
+    background-color: #03a9f4;
+}
 /******** FOOTER ********/
+footer{
+    background-color: #8e24aa;
+}
+
+
+
+/*** VERSIÓN MÓVIL ***/
+@media (max-width: 758px){
+    
+}
