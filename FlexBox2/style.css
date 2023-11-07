@@ -41,3 +41,14 @@
 /********* ASIDE ********/
 
 /******** FOOTER ********/
+
+
+/*** VERSIÓN TABLET ***/
+@media (min-width: 468px){
+
+}
+
+/*** VERSIÓN ESCRITORIO ***/
+@media (min-width: 758px){
+
+}
