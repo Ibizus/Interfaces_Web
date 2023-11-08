@@ -34,7 +34,7 @@ article{
     margin: 8px 0;
     padding-bottom: 8px;
 }
-article h3, article p, article a{
+article h4, article p, article a{
     text-align: center;
     margin: 8px;
 }
@@ -76,13 +76,13 @@ article{
         align-items: flex-start;
     }
     article{
-        flex-basis: calc((100%/2) - 8px);
+        flex-basis: calc((100%/2) - 1rem); /* 1rem de margen entre los dos artículos */
     }
 }
 
 /*** VERSIÓN ESCRITORIO ***/
 @media (min-width: 758px){
     article{
-        flex-basis: calc((100%/3) - 8px);
+        flex-basis: calc((100%/3) - calc(1rem)); /* el mismo margen total a repartir entre el número de espacios */
     }
 }
