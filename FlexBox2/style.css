@@ -73,9 +73,9 @@ article{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-start;
     }
     article{
-        /*flex: 0 1 calc(50%);*/
         flex-basis: calc((100%/2) - 8px);
     }
 }
@@ -83,7 +83,6 @@ article{
 /*** VERSIÓN ESCRITORIO ***/
 @media (min-width: 758px){
     article{
-        /*flex: 0 1 calc(33%);*/
         flex-basis: calc((100%/3) - 8px);
     }
 }
