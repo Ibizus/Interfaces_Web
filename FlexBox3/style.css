@@ -9,35 +9,113 @@
 /************* display/position/float **************/
 /******* height/width/padding/border/margin ********/
 
-/****** CONTAINER *******/
-
 /********* BODY *********/
 
-/******** HEADER ********/
+/****** CONTAINER *******/
+#container{
+    display: flex;
+    flex-direction: column;
 
-/********* NAV **********/
+    max-width: 1000px;
+    margin: auto;
+}
+/********* Common to every menu **********/
+#sencillo, #iconos, #desplegable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/******** SENCILLO **********/
+#sencillo{
 
-/********* MAIN *********/
+}
+/********** ICONOS **********/
+#iconos li a{
+    display: flex;
+    justify-content: space-between;
+}
+#iconos li a i{
+    margin: 10px;
+}
+/********* DROPDOWN *********/
+#desplegable{
 
-/********* ASIDE ********/
-
-/******** FOOTER ********/
+}
+/*********** REDES **********/
+#redes{
+    display: flex;
+    justify-content: flex-end;
+}
+#redes li{
+    padding: 10px;
+}
+/***** DROPDOWN + REDES *****/
+#doble{
+    display: flex;
+    justify-content: space-between;
+}
+#doble-izq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#doble-dcha{
+    display: flex;
+    justify-content: flex-end;
+}
+#doble-dcha li{
+    padding: 10px;;
+}
 
 
 /************ STYLE  ************/
 /******************** Propiedades Generales *****************/
-
-
-/****** CONTAINER *******/
+ul, nav{
+    background-color: #3f51b5;
+    /* #1a2770 azul hoover */
+    /* #ff5e62 rojo hoover */
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li:hover{
+    background-color: #1a2770;
+}
+li ul li:hover{
+    background-color: #ff5e62;
+}
+p{
+    color: white;
+}
 
 /********* BODY *********/
+body{
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+}
+/****** CONTAINER *******/
+#container{
+    background-color: white;
+}
 
-/******** HEADER ********/
+/******** SENCILLO **********/
 
-/********* NAV **********/
+/********** ICONOS **********/
 
-/********* MAIN *********/
+/********* DROPDOWN *********/
 
-/********* ASIDE ********/
+/*********** REDES **********/
 
-/******** FOOTER ********/
+/***** DROPDOWN + REDES *****/
+
+
+/*** VERSIÓN ESCRITORIO ***/
+@media (min-width: 768px){
+
+    #container{
+        padding: 20px;
+    }
+}
