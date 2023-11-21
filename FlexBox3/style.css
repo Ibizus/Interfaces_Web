@@ -31,25 +31,17 @@ ul li ul{ /* SubMenús dentro de otros menús */
     text-align: center;
 }
 li, h1{
-    padding: 10px;
+    padding: 15px;
 }
-/******** SENCILLO **********/
-#sencillo{
 
-}
 /********** ICONOS **********/
 #iconos li a{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 #iconos li a i{
-    margin: 10px;
+    margin: 15px;
 }
-/********* DROPDOWN *********/
-#desplegable{
-
-}
-
 
 /*********** REDES **********/
 #redes{
@@ -57,7 +49,7 @@ li, h1{
     justify-content: flex-end;
 }
 #redes li{
-    padding: 10px;
+    padding: 15px;
 }
 /***** DROPDOWN + REDES *****/
 #doble{
@@ -77,7 +69,7 @@ li, h1{
     align-items: flex-start;
 }
 #doble-dcha li{
-    padding: 10px;;
+    padding: 15px;;
 }
 
 
@@ -85,8 +77,6 @@ li, h1{
 /******************** Propiedades Generales *****************/
 ul, nav{
     background-color: #3f51b5;
-    /* #1a2770 azul hoover */
-    /* #ff5e62 rojo hoover */
 }
 li{
     list-style: none;
@@ -114,16 +104,31 @@ body{
     background-color: white;
 }
 
-/******** SENCILLO **********/
+/*** VERSIÓN SOLO ICONOS EN MOVIL A MENOS DE 270px ***/
+@media (max-width: 270px){
 
-/********** ICONOS **********/
+    #iconos li a div{
+        display: none;
+    }
+}
 
-/********* DROPDOWN *********/
+/*** VERSIÓN TABLET ***/
+@media (min-width: 480px){
 
-/*********** REDES **********/
+    #iconos{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #iconos li{
+        display: flex;
+        flex-grow: 1;
+    }
+    .textoEnlaceConIconos p{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-/***** DROPDOWN + REDES *****/
-
+}
 
 /*** VERSIÓN ESCRITORIO ***/
 @media (min-width: 768px){
@@ -131,4 +136,16 @@ body{
     #container{
         padding: 20px;
     }
+    #sencillo, #iconos, #desplegable, #doble-izq{
+        flex-direction: row;
+        text-align: center;
+    }
+    #sencillo li, #iconos li, #desplegable li{
+        flex-grow: 1;
+    }
+    ul li ul, #doble ul li ul{ /* SubMenús dentro de otros menús */
+        /*display: none;*/
+        position: absolute;
+    }
+
 }
