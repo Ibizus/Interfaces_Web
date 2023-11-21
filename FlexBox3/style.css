@@ -23,12 +23,12 @@
 #sencillo, #iconos, #desplegable{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 ul li ul{ /* SubMenús dentro de otros menús */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 li, h1{
     padding: 10px;
@@ -64,14 +64,17 @@ li, h1{
     display: flex;
     justify-content: space-between;
 }
-#doble-izq{
+#doble-izq, #doble-izq li ul{ /* Menú y Submenú */
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
-    align-items: center;
+    text-align: left;
 }
 #doble-dcha{
     display: flex;
+    flex-grow: 1;
     justify-content: flex-end;
+    align-items: flex-start;
 }
 #doble-dcha li{
     padding: 10px;;
