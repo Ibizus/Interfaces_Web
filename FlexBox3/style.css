@@ -18,6 +18,7 @@
 
     max-width: 1000px;
     margin: auto;
+    height: 100%;
 }
 /********* Common to every menu **********/
 #sencillo, #iconos, #desplegable{
@@ -29,6 +30,7 @@ ul li ul{ /* SubMenús dentro de otros menús */
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 10px;
 }
 li, h1{
     padding: 15px;
@@ -38,6 +40,7 @@ li, h1{
 #iconos li a{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 #iconos li a i{
     margin: 15px;
@@ -72,7 +75,6 @@ li, h1{
     padding: 15px;;
 }
 
-
 /************ STYLE  ************/
 /******************** Propiedades Generales *****************/
 ul, nav{
@@ -85,20 +87,24 @@ a{
     text-decoration: none;
     color: white;
 }
+p{
+    color: white;
+}
 li:hover{
     background-color: #1a2770;
 }
 li ul li:hover{
     background-color: #ff5e62;
 }
-p{
-    color: white;
+ul li:hover > ul, #doble ul li:hover > ul { /* items del menu desplegable al pasar el ratón */
+    background-color: #1a2770;
 }
 
 /********* BODY *********/
 body{
     background: linear-gradient(to right, #ff5e62, #ff9966);
 }
+
 /****** CONTAINER *******/
 #container{
     background-color: white;
@@ -121,13 +127,12 @@ body{
     }
     #iconos li{
         display: flex;
-        flex-grow: 1;
+        flex-basis: calc(100%/2);
     }
     .textoEnlaceConIconos p{
         display: flex;
         flex-wrap: wrap;
     }
-
 }
 
 /*** VERSIÓN ESCRITORIO ***/
@@ -135,13 +140,18 @@ body{
 
     #container{
         padding: 20px;
+        height: 100vh;
     }
     #sencillo, #iconos, #desplegable, #doble-izq{
         flex-direction: row;
         text-align: center;
     }
-    #sencillo li, #iconos li, #desplegable li{
+    #sencillo li, #desplegable li{
         flex-grow: 1;
+    }
+    #iconos li{
+        flex-basis: calc(100%/4);
+        justify-content: center;
     }
     #desplegable li, nav ul li{
         position: relative;
@@ -152,9 +162,10 @@ body{
         width: 100%;
         top: 100%;
         left: 0;
+        margin: 0;
     }
     ul li:hover > ul, #doble ul li:hover > ul { /* items del menu desplegable al pasar el ratón */
-    display:block;
+        display:block;
+        background-color: #ff5e62;
     }
-
 }
