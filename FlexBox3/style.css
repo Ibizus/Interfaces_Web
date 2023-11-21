@@ -143,9 +143,18 @@ body{
     #sencillo li, #iconos li, #desplegable li{
         flex-grow: 1;
     }
-    ul li ul, #doble ul li ul{ /* SubMenús dentro de otros menús */
-        /*display: none;*/
+    #desplegable li, nav ul li{
+        position: relative;
+    }
+    ul li ul, #doble ul li ul{ /* Submenús desplegables */
+        display: none;
         position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+    }
+    ul li:hover > ul, #doble ul li:hover > ul { /* items del menu desplegable al pasar el ratón */
+    display:block;
     }
 
 }
