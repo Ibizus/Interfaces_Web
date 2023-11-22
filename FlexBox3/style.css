@@ -36,11 +36,16 @@ li, h1{
     padding: 15px;
 }
 
+#sencillo li{
+    display: flex;
+    flex-basis: calc(100%/6);
+    justify-content: center;
+}
 /********** ICONOS **********/
 #iconos li a{
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
 }
 #iconos li a i{
     margin: 15px;
@@ -89,6 +94,9 @@ a{
 }
 p{
     color: white;
+}
+i{
+    font-size: 32px;
 }
 li:hover{
     background-color: #1a2770;
