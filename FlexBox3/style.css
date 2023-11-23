@@ -9,13 +9,11 @@
 /************* display/position/float **************/
 /******* height/width/padding/border/margin ********/
 
-/********* BODY *********/
 
 /****** CONTAINER *******/
 #container{
     display: flex;
     flex-direction: column;
-
     max-width: 1000px;
     margin: auto;
     height: 100%;
@@ -29,22 +27,24 @@
 ul li ul{ /* SubMenús dentro de otros menús */
     display: flex;
     flex-direction: column;
-    text-align: center;
     margin-top: 10px;
 }
 li, h1{
     padding: 15px;
 }
 
+/********** SENCILLO **********/
 #sencillo li{
     display: flex;
-    flex-basis: calc(100%/6);
     justify-content: center;
 }
 /********** ICONOS **********/
-#iconos li a{
+#iconos li{
     display: flex;
     justify-content: center;
+}
+#iconos li a{
+    display: flex;
     align-items: center;
 }
 #iconos li a i{
@@ -95,9 +95,6 @@ a{
 p{
     color: white;
 }
-i{
-    font-size: 32px;
-}
 li:hover{
     background-color: #1a2770;
 }
@@ -117,9 +114,12 @@ body{
 #container{
     background-color: white;
 }
+#iconos i{
+    font-size: 32px;
+}
 
 /*** VERSIÓN SOLO ICONOS EN MOVIL A MENOS DE 270px ***/
-@media (max-width: 270px){
+@media (max-width: 480px){
 
     #iconos li a div{
         display: none;
@@ -134,7 +134,6 @@ body{
         flex-wrap: wrap;
     }
     #iconos li{
-        display: flex;
         flex-basis: calc(100%/2);
     }
     .textoEnlaceConIconos p{
@@ -154,12 +153,11 @@ body{
         flex-direction: row;
         text-align: center;
     }
-    #sencillo li, #desplegable li{
-        flex-grow: 1;
+    #sencillo li{
+        flex-basis: calc(100%/6);
     }
-    #iconos li{
+    #iconos li, #desplegable li, #doble-izq li{
         flex-basis: calc(100%/4);
-        justify-content: center;
     }
     #desplegable li, nav ul li{
         position: relative;
