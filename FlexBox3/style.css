@@ -9,7 +9,6 @@
 /************* display/position/float **************/
 /******* height/width/padding/border/margin ********/
 
-
 /****** CONTAINER *******/
 #container{
     display: flex;
@@ -19,7 +18,7 @@
     height: 100%;
 }
 /********* Common to every menu **********/
-#sencillo, #iconos, #desplegable{
+#sencillo, #iconos, .desplegable{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -38,25 +37,19 @@ li, h1{
     display: flex;
     justify-content: center;
 }
+
 /********** ICONOS **********/
-#iconos li{
-    display: flex;
-    justify-content: center;
-}
-#iconos li a{
-    display: flex;
-    align-items: center;
-}
-#iconos li a i{
-    margin: 15px;
+#iconos li a div{
+    display: none;
 }
 
 /*********** REDES **********/
-#redes{
+.redes{
     display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
 }
-#redes li{
+.redes li{
     padding: 15px;
 }
 /***** DROPDOWN + REDES *****/
@@ -64,25 +57,10 @@ li, h1{
     display: flex;
     justify-content: space-between;
 }
-#doble-izq, #doble-izq li ul{ /* Menú y Submenú */
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    text-align: left;
-}
-#doble-dcha{
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-#doble-dcha li{
-    padding: 15px;;
-}
 
 /************ STYLE  ************/
 /******************** Propiedades Generales *****************/
-ul, nav{
+ul, section{
     background-color: #3f51b5;
 }
 li{
@@ -95,10 +73,10 @@ a{
 p{
     color: white;
 }
-li:hover{
+li:hover{ /* Enlaces normales */
     background-color: #1a2770;
 }
-li ul li:hover{
+li ul li:hover{ /* Enlaces de los submenús */
     background-color: #ff5e62;
 }
 ul li:hover > ul, #doble ul li:hover > ul { /* items del menu desplegable al pasar el ratón */
@@ -118,27 +96,31 @@ body{
     font-size: 32px;
 }
 
-/*** VERSIÓN SOLO ICONOS EN MOVIL A MENOS DE 270px ***/
-@media (max-width: 480px){
-
-    #iconos li a div{
-        display: none;
-    }
-}
 
 /*** VERSIÓN TABLET ***/
 @media (min-width: 480px){
 
-    #iconos{
-        flex-direction: row;
+    #iconos{ /* Pasa de Column a Row Wrap */
+        flex-direction:row;
         flex-wrap: wrap;
     }
-    #iconos li{
+    #iconos li{ /* Le damos 50% del ancho del padre */
         flex-basis: calc(100%/2);
     }
-    .textoEnlaceConIconos p{
+    #iconos li{
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #iconos li a{
+        display: flex;
+        align-items: center;
+    }
+    #iconos li a i{
+        margin: 15px;
+    }
+    #iconos li a div{
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -147,20 +129,23 @@ body{
 
     #container{
         padding: 20px;
-        height: 100vh;
+        height: 100vh; /* Amplia fondo blanco hasta abajo */
     }
-    #sencillo, #iconos, #desplegable, #doble-izq{
+    #sencillo, #iconos, .desplegable{ /* Pasan de column a row */
         flex-direction: row;
         text-align: center;
     }
     #sencillo li{
         flex-basis: calc(100%/6);
     }
-    #iconos li, #desplegable li, #doble-izq li{
+    #iconos li, .desplegable li{
         flex-basis: calc(100%/4);
     }
-    #desplegable li, nav ul li{
+    .desplegable li{ /* Hay que dar Relative al padre de un Absolute */
         position: relative;
+    }
+    #doble ul{ /* Reparte el espacio en menu doble para no comprimir desplegable */
+        flex-grow: 1;
     }
     ul li ul, #doble ul li ul{ /* Submenús desplegables */
         display: none;
