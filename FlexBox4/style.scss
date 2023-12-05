@@ -1,5 +1,5 @@
-@import "variables.scss";
-@import "mixins.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
 
 /*** Reseteo de Propiedades ***/
 *{
@@ -15,8 +15,7 @@
 /********* BODY *********/
 .container{
     max-width: $maxWidthContent;
-    margin: auto;
-    background-color: red;
+    /*margin: auto;*/
 }
 body{
     display: flex;
@@ -34,7 +33,23 @@ header{
     flex-direction: column;
     justify-content: center;
 }
+#barra_busqueda{
+    display: flex;
+    align-items: center;
+}
+#barra_busqueda input{
+    display: flex;
+    flex-grow: 1;
+}
+#lupa{
+    margin-left: calc($margin*-2);
+    height: 70%;
+}
 #label-portada{
+    display: flex;
+    flex-direction: column;
+}
+#label-portada:first-child{
     display: flex;
     flex-direction: column;
 }
@@ -64,7 +79,7 @@ main h2{
     flex-wrap: wrap;
 }
 .curso{
-    @include mini-phone(){ // 1 articulo
+    @include mini-mobile(){ // 1 articulo
         flex: 1 0 95%;
     }
     @include phone(){// 2 articulos
@@ -84,7 +99,7 @@ main h2{
 /************ STYLE  ************/
 /******************** Propiedades Generales *****************/
 #portada, #label-portada, footer{
-    color: $font-colorW;
+    color: $white-FontColor;
 }
 
 

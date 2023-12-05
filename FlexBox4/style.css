@@ -1,0 +1,139 @@
+/*** Reseteo de Propiedades ***/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/************ LAYOUT  ************/
+/************* display/position/float **************/
+/******* height/width/padding/border/margin ********/
+/********* BODY *********/
+.container {
+  max-width: 1200px;
+  /*margin: auto;*/
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#carrito {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#barra_busqueda {
+  display: flex;
+  align-items: center;
+}
+
+#barra_busqueda input {
+  display: flex;
+  flex-grow: 1;
+}
+
+#lupa {
+  margin-left: -2rem;
+  height: 70%;
+}
+
+#label-portada {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-portada:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-portada article {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.texto_junto_a_icono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/********* MAIN *********/
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main h2 {
+  display: flex;
+  align-self: center;
+}
+
+#bloque-cursos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 280px) {
+  .curso {
+    flex: 1 0 95%;
+  }
+}
+@media only screen and (min-width: 280px) {
+  .curso {
+    flex: 1 0 45%;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .curso {
+    flex: 1 0 30%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .curso {
+    flex: 1 0 22%;
+  }
+}
+
+/******** FOOTER ********/
+/************ STYLE  ************/
+/******************** Propiedades Generales *****************/
+#portada, #label-portada, footer {
+  color: white;
+}
+
+/********* BODY *********/
+/********* MAIN *********/
+#portada {
+  background-image: url(images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+#label-portada {
+  background: linear-gradient(to right, #741d51, #e34d52);
+}
+
+.icono_portada {
+  width: 32px;
+}
+
+/******** FOOTER ********/
+footer {
+  background-color: black;
+}/*# sourceMappingURL=style.css.map */
