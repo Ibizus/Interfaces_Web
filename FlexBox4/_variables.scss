@@ -4,8 +4,17 @@ $bg-portada-gradiente: linear-gradient(to right, #741d51, #e34d52);
 $bg-footer: black;
 $font-colorW: white;
 
+// 
+$margin: 1rem;
+
+// QUERY SIZES
+$minWidthPhone: 280px;
+$minWidthTablet: 280px;
+$minWidthDesktop: 280px;
+$maxWidthContent: 1200px;
+
 // IMAGES
-$img-portada:url(images/hero.jpg);
+$img-portada: url(images/hero.jpg);
 
 
 

@@ -14,7 +14,9 @@
 
 /********* BODY *********/
 .container{
-    max-width: 1200px;
+    max-width: $maxWidthContent;
+    margin: auto;
+    background-color: red;
 }
 body{
     display: flex;
@@ -62,10 +64,10 @@ main h2{
     flex-wrap: wrap;
 }
 .curso{
-    @include mobile(){ // 1 articulo
+    @include mini-phone(){ // 1 articulo
         flex: 1 0 95%;
     }
-    @include tablet-mini(){// 2 articulos
+    @include phone(){// 2 articulos
         flex: 1 0 45%;
     }
     @include tablet(){// 3 articulos
@@ -108,24 +110,3 @@ main h2{
 footer{
     background-color: $bg-footer;
 }
-
-
-// /***** VERIÓN MÓVIL ******/
-// @media (min-width: 280px){ /* 2 cursos */
-
-
-// }
-
-// /*** VERSIÓN TABLET ***/
-// @media (min-width: 480px){ /* 3 cursos */ 
-
-
-// }
-
-// /*** VERSIÓN ESCRITORIO ***/
-// @media (min-width: 768px){  /* 4 cursos */ 
-
-//     .container{
-//         max-width: 1200px;
-//     }
-// }

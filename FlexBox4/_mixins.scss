@@ -1,24 +1,24 @@
 
-@mixin mobile(){
-    @media only screen and (max-width:280px){
+@mixin mini-mobile(){
+    @media only screen and (max-width: $minWidthPhone){
         @content;
     }
 }
 
-@mixin tablet-mini(){
-    @media only screen and (min-width:280px){
+@mixin phone(){
+    @media only screen and (min-width: $minWidthPhone){
         @content;
     }
 }
 
 @mixin tablet(){
-    @media only screen and (min-width:480px){
+    @media only screen and (min-width: $minWidthTablet){
         @content;
     }
 }
 
 @mixin desktop(){
-    @media only screen and (min-width:768px){
+    @media only screen and (min-width: $minWidthDesktop){
         @content;
     }
 }
