@@ -8,120 +8,179 @@
     box-sizing: border-box;
 }
 
-/************ LAYOUT  ************/
-/************* display/position/float **************/
-/******* height/width/padding/border/margin ********/
-
-/********* BODY *********/
-.container{
-    max-width: $maxWidthContent;
-    /*margin: auto;*/
-}
+/* Propiedades generales: */
 body{
     display: flex;
     flex-direction: column;
+    font-family: Raleway, sans-serif;
 }
-#carrito{
-    display: none;
+.container{
+    @include desktop{
+        max-width: $maxWidthContent;
+        margin: auto;
+    }
 }
+#portada, #label-portada{
+    color: $white-FontColor;
+}
+
+/******** HEADER ********/
 header{
     display: flex;
-    justify-content: space-between;
+
+    #iconos_header{
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        padding: $margin;
+    }
+    #carrito{
+        display: none;
+    }
 }
+
+/******** PORTADA ********/
 #portada{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: $margin;
+    /* Imagen portada: */
+    background-image: url(images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+
+    h1, h5{
+        margin: $margin 0;
+    }
+    #barra_busqueda{
+        display: flex;
+        align-items: center;
+
+        input{
+            display: flex;
+            flex-grow: 1;
+            padding: calc($margin/2);
+        }
+        #lupa{
+            margin-left: calc($margin*-2);
+            height: 70%;
+        }
+    }
 }
-#barra_busqueda{
-    display: flex;
-    align-items: center;
-}
-#barra_busqueda input{
-    display: flex;
-    flex-grow: 1;
-}
-#lupa{
-    margin-left: calc($margin*-2);
-    height: 70%;
-}
+
 #label-portada{
     display: flex;
-    flex-direction: column;
+    background: $bg-portada-gradiente;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        article{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            .icono_portada{
+                width: 32px;
+                margin: $margin;
+            }
+            .texto_junto_a_icono{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-grow: 1;
+                margin: $margin;
+            }
+        }
+    }
 }
-#label-portada:first-child{
-    display: flex;
-    flex-direction: column;
-}
-#label-portada article{
-    display: flex;
-    justify-content: flex-start;
-}
-.texto_junto_a_icono{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-}
+
 
 /********* MAIN *********/
 main{
     display: flex;
     flex-direction: column;
-}
-main h2{
-    display: flex;
-    align-self: center;
-}
-#bloque-cursos{
-    display: flex;
-    flex-wrap: wrap;
-}
-.curso{
-    @include mini-mobile(){ // 1 articulo
-        flex: 1 0 95%;
+    h2{
+        display: flex;
+        align-self: center;
     }
-    @include phone(){// 2 articulos
-        flex: 1 0 45%;
+    #bloque-cursos{
+        display: flex;
+        flex-wrap: wrap;
+
+        .curso{
+            display: flex;
+            flex-direction: column;
+            margin: $margin;
+            border: solid lightgray 0.5px;
+
+            .texto-curso{
+                display: flex;
+                flex-direction: column;
+                margin: $margin;
+
+                h3, p, img, div{
+                    margin-bottom: $margin;
+                }
+                img{ /* estrellas */
+                    display: flex;
+                    align-self: flex-start
+                }
+                #precios{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                .button{
+                    @include boton($color-boton-curso);
+                }
+            }
+
+            // 1 articulo
+            flex: 1 0 calc(95% - $margin);
+
+            @include phone(){ // 2 articulos
+                flex: 1 0 calc(45% - $margin);
+            }
+            @include tablet(){ // 3 articulos
+                flex: 1 0 calc(30% - $margin);
+            }
+            @include desktop(){ // 4 articulos
+                flex: 1 0 calc(22% - $margin);
+            }
+        }
     }
-    @include tablet(){// 3 articulos
-        flex: 1 0 30%;
-    }
-    @include desktop(){// 4 articulos
-        flex: 1 0 22%;
-    }
 }
 
-/******** FOOTER ********/
-
-
-/************ STYLE  ************/
-/******************** Propiedades Generales *****************/
-#portada, #label-portada, footer{
-    color: $white-FontColor;
-}
-
-
-/********* BODY *********/
-
-
-
-/********* MAIN *********/
-#portada{
-    background-image: url(images/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-}
-#label-portada{
-    background: $bg-portada-gradiente;
-}
-.icono_portada{
-    width: 32px;
-}
 
 /******** FOOTER ********/
 footer{
+    display: flex;
     background-color: $bg-footer;
+    padding: $margin;
+
+    .container{
+        display: flex;
+        justify-content: flex-start;
+
+        section{
+            display: flex;
+            flex-direction: column;
+            a{
+                text-decoration: none;
+                color: $white-FontColor;
+            }
+        }
+        section:first-child{
+            margin-right: calc($margin*2);
+        }
+        section:nth-child(2){
+            margin-left: calc($margin*2);
+        }
+    }
 }

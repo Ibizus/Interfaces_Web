@@ -5,71 +5,92 @@
   box-sizing: border-box;
 }
 
-/************ LAYOUT  ************/
-/************* display/position/float **************/
-/******* height/width/padding/border/margin ********/
-/********* BODY *********/
-.container {
-  max-width: 1200px;
-  /*margin: auto;*/
-}
-
+/* Propiedades generales: */
 body {
   display: flex;
   flex-direction: column;
+  font-family: Raleway, sans-serif;
 }
 
-#carrito {
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+#portada, #label-portada {
+  color: white;
+}
+
+/******** HEADER ********/
+header {
+  display: flex;
+}
+header #iconos_header {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 1rem;
+}
+header #carrito {
   display: none;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
+/******** PORTADA ********/
 #portada {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1rem;
+  /* Imagen portada: */
+  background-image: url(images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
 }
-
-#barra_busqueda {
+#portada h1, #portada h5 {
+  margin: 1rem 0;
+}
+#portada #barra_busqueda {
   display: flex;
   align-items: center;
 }
-
-#barra_busqueda input {
+#portada #barra_busqueda input {
   display: flex;
   flex-grow: 1;
+  padding: 0.5rem;
 }
-
-#lupa {
+#portada #barra_busqueda #lupa {
   margin-left: -2rem;
   height: 70%;
 }
 
 #label-portada {
   display: flex;
-  flex-direction: column;
+  background: linear-gradient(to right, #741d51, #e34d52);
 }
-
-#label-portada:first-child {
+#label-portada .container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
-
-#label-portada article {
+#label-portada .container article {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
 }
-
-.texto_junto_a_icono {
+#label-portada .container article .icono_portada {
+  width: 32px;
+  margin: 1rem;
+}
+#label-portada .container article .texto_junto_a_icono {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  margin: 1rem;
 }
 
 /********* MAIN *********/
@@ -77,63 +98,84 @@ main {
   display: flex;
   flex-direction: column;
 }
-
 main h2 {
   display: flex;
   align-self: center;
 }
-
-#bloque-cursos {
+main #bloque-cursos {
   display: flex;
   flex-wrap: wrap;
 }
-
-@media only screen and (max-width: 280px) {
-  .curso {
-    flex: 1 0 95%;
-  }
+main #bloque-cursos .curso {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  border: solid lightgray 0.5px;
+  flex: 1 0 calc(95% - 1rem);
+}
+main #bloque-cursos .curso .texto-curso {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+main #bloque-cursos .curso .texto-curso h3, main #bloque-cursos .curso .texto-curso p, main #bloque-cursos .curso .texto-curso img, main #bloque-cursos .curso .texto-curso div {
+  margin-bottom: 1rem;
+}
+main #bloque-cursos .curso .texto-curso img { /* estrellas */
+  display: flex;
+  align-self: flex-start;
+}
+main #bloque-cursos .curso .texto-curso #precios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main #bloque-cursos .curso .texto-curso .button {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background-color: #33c3f0;
+  color: white;
 }
 @media only screen and (min-width: 280px) {
-  .curso {
-    flex: 1 0 45%;
+  main #bloque-cursos .curso {
+    flex: 1 0 calc(45% - 1rem);
   }
 }
 @media only screen and (min-width: 480px) {
-  .curso {
-    flex: 1 0 30%;
+  main #bloque-cursos .curso {
+    flex: 1 0 calc(30% - 1rem);
   }
 }
 @media only screen and (min-width: 768px) {
-  .curso {
-    flex: 1 0 22%;
+  main #bloque-cursos .curso {
+    flex: 1 0 calc(22% - 1rem);
   }
-}
-
-/******** FOOTER ********/
-/************ STYLE  ************/
-/******************** Propiedades Generales *****************/
-#portada, #label-portada, footer {
-  color: white;
-}
-
-/********* BODY *********/
-/********* MAIN *********/
-#portada {
-  background-image: url(images/hero.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-}
-
-#label-portada {
-  background: linear-gradient(to right, #741d51, #e34d52);
-}
-
-.icono_portada {
-  width: 32px;
 }
 
 /******** FOOTER ********/
 footer {
+  display: flex;
   background-color: black;
+  padding: 1rem;
+}
+footer .container {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .container section {
+  display: flex;
+  flex-direction: column;
+}
+footer .container section a {
+  text-decoration: none;
+  color: white;
+}
+footer .container section:first-child {
+  margin-right: 2rem;
+}
+footer .container section:nth-child(2) {
+  margin-left: 2rem;
 }/*# sourceMappingURL=style.css.map */
