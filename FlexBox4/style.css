@@ -9,7 +9,7 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: Raleway, sans-serif;
+  font-family: sans-serif;
 }
 
 @media only screen and (min-width: 768px) {
@@ -25,7 +25,9 @@ body {
 
 /******** HEADER ********/
 header {
+  position: relative;
   display: flex;
+  width: 100%;
 }
 header #iconos_header {
   display: flex;
@@ -35,19 +37,57 @@ header #iconos_header {
 }
 header #carrito {
   display: none;
+  width: 30%;
+}
+header #cart-icon:hover > #carrito {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  padding: 0 1rem 1rem;
+  background-color: white;
+}
+header #cart-icon:hover > #carrito #fila_compras {
+  display: flex;
+}
+header #cart-icon:hover > #carrito #fila_compras div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header #cart-icon:hover > #carrito #fila_compras div img {
+  width: 100%;
+  margin-bottom: 2px;
+}
+header #cart-icon:hover > #carrito #fila_compras div p {
+  margin: auto;
+}
+header #cart-icon:hover > #carrito a {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background-color: #741d51;
+  color: white;
 }
 
 /******** PORTADA ********/
 #portada {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
   /* Imagen portada: */
   background-image: url(images/hero.jpg);
   background-size: cover;
   background-position: center;
   height: 400px;
+}
+#portada .container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
 }
 #portada h1, #portada h5 {
   margin: 1rem 0;
@@ -55,6 +95,7 @@ header #carrito {
 #portada #barra_busqueda {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 #portada #barra_busqueda input {
   display: flex;
@@ -64,6 +105,11 @@ header #carrito {
 #portada #barra_busqueda #lupa {
   margin-left: -2rem;
   height: 70%;
+}
+@media only screen and (min-width: 480px) {
+  #portada #barra_busqueda {
+    width: 400px;
+  }
 }
 
 #label-portada {
@@ -92,11 +138,18 @@ header #carrito {
   flex-grow: 1;
   margin: 1rem;
 }
+@media only screen and (min-width: 768px) {
+  #label-portada .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 /********* MAIN *********/
 main {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 }
 main h2 {
   display: flex;
@@ -104,14 +157,35 @@ main h2 {
 }
 main #bloque-cursos {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 main #bloque-cursos .curso {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  margin: 1rem 0;
   border: solid lightgray 0.5px;
-  flex: 1 0 calc(95% - 1rem);
+  flex: 1 0 calc(100% - 1rem);
+}
+@media only screen and (min-width: 280px) {
+  main #bloque-cursos .curso {
+    flex: 1 0 calc(50% - 1rem);
+  }
+}
+@media only screen and (min-width: 480px) {
+  main #bloque-cursos .curso {
+    flex: 0 0 calc(33.3333333333% - 1rem);
+  }
+}
+@media only screen and (min-width: 768px) {
+  main #bloque-cursos .curso {
+    flex: 0 0 calc(25% - 1rem);
+  }
+}
+main #bloque-cursos .curso img {
+  width: 100%;
 }
 main #bloque-cursos .curso .texto-curso {
   display: flex;
@@ -130,6 +204,9 @@ main #bloque-cursos .curso .texto-curso #precios {
   flex-direction: row;
   justify-content: space-between;
 }
+main #bloque-cursos .curso .texto-curso #precios p {
+  text-decoration: line-through;
+}
 main #bloque-cursos .curso .texto-curso .button {
   display: flex;
   justify-content: center;
@@ -139,43 +216,28 @@ main #bloque-cursos .curso .texto-curso .button {
   background-color: #33c3f0;
   color: white;
 }
-@media only screen and (min-width: 280px) {
-  main #bloque-cursos .curso {
-    flex: 1 0 calc(45% - 1rem);
-  }
-}
-@media only screen and (min-width: 480px) {
-  main #bloque-cursos .curso {
-    flex: 1 0 calc(30% - 1rem);
-  }
-}
-@media only screen and (min-width: 768px) {
-  main #bloque-cursos .curso {
-    flex: 1 0 calc(22% - 1rem);
-  }
-}
 
 /******** FOOTER ********/
 footer {
   display: flex;
   background-color: black;
-  padding: 1rem;
 }
 footer .container {
   display: flex;
-  justify-content: flex-start;
+  flex-grow: 1;
 }
 footer .container section {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  padding: 1rem;
 }
 footer .container section a {
   text-decoration: none;
   color: white;
 }
-footer .container section:first-child {
-  margin-right: 2rem;
-}
-footer .container section:nth-child(2) {
-  margin-left: 2rem;
+@media only screen and (min-width: 768px) {
+  footer .container section {
+    flex: 0 0 25%;
+  }
 }/*# sourceMappingURL=style.css.map */

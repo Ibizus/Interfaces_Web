@@ -9,33 +9,42 @@
 <body>
     <header class="container">
         <div id="iconos_header">
-            <img src="images/logo.jpg" alt="">
-            <img src="images/cart.png" alt="">
+            <a href="index.html"><img src="images/logo.jpg" alt=""></a>
+            <div id="cart-icon"><img src="images/cart.png" alt="">
+                <section id="carrito">
+                    <div id="fila_compras">
+                        <div>
+                            <h3>Imagen</h3>
+                            <img src="images/curso1.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3>Nombre</h3>
+                            <p>CSS Grid y Flexbox Construye + 10 Proyectos</p>
+                        </div>
+                        <div>
+                            <h3>Precio</h3>
+                            <p>$15</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <a href="#" class="button">Vaciar Carrito</a>
+                    </div>
+            </div>
         </div>
-        <section id="carrito">
-            <div id="fila_titulos">
-                <p>Imagen</p>
-                <p>Nombre</p>
-                <p>Precio</p>
-            </div>
-            <div id="fila_contenido">
-                <img src="images/curso1.jpg" alt="curso">
-                <p>CSS Grid y Flexbox Construye + 10 Proyectos</p>
-                <p>$15</p>
-            </div>
-            <div>
-                <a href="#" class="button">Vaciar Carrito</a>
-            </div>
+
         </section>
     </header>
 
     <section id="portada">
-        <h1>Aprende algo nuevo</h1>
-        <h5>Todos los cursos a $15</h5>
-        <form id="barra_busqueda">
-            <input type="search" placeholder="¿Que te gustaría aprender?">
-            <img id="lupa" src="images/lupa.png" alt="">
-        </form>
+        <div class="container">
+            <h1>Aprende algo nuevo</h1>
+            <h5>Todos los cursos a $15</h5>
+            <form id="barra_busqueda">
+                <input type="search" placeholder="¿Que te gustaría aprender?">
+                <img id="lupa" src="images/lupa.png" alt="">
+            </form>
+        </div>
     </section>
 
     <section id="label-portada">
