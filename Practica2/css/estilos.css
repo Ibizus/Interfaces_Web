@@ -1,0 +1,178 @@
+/***************** VARIABLES ****************/
+/* fuente */
+/* colores */
+/* imagenes */
+/* media queries */
+/* margins */
+/* otros */
+/***************** VARIABLES ****************/
+/* fuente */
+/* colores */
+/* imagenes */
+/* media queries */
+/* margins */
+/* otros */
+/****************** MIXINS ***********************/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-image: url(../imagenes/bg-2.jpg);
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
+  min-height: 580px;
+}
+header #fondomenu {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+header .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .menu .logo {
+  font-size: 30px;
+  margin: 16px;
+}
+header .menu .submenu, header .menu .off {
+  display: none;
+}
+header .menu .nav a .fa {
+  font-size: 25px;
+  margin: 0 8px;
+}
+header .menu .social {
+  display: flex;
+  flex-direction: row;
+}
+header .menu .social div {
+  margin: 8px 8px 0 0;
+}
+header .texto-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+header .texto-principal h1 {
+  font-family: "Lora", serif;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  background-color: #F7F7F7;
+}
+.section main {
+  display: flex;
+  flex-direction: column;
+}
+.section main .article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 8px 16px;
+  background-color: #ececec;
+}
+.section main .article h2 {
+  position: absolute;
+  top: 0;
+  color: #fff;
+}
+.section main .article h3 {
+  margin: 8px 0;
+  color: #444;
+}
+.section main .article p {
+  color: #444;
+}
+.section main .article .boton {
+  display: flex;
+  align-self: flex-start;
+  background-color: #000;
+  color: #fff;
+  margin: 8px 0;
+  padding: 8px;
+}
+.section main .article .boton .boton:hover {
+  background-color: #546cc3;
+}
+.section main .navegacion {
+  display: flex;
+  flex-direction: row;
+  margin: 16px 0;
+}
+.section main .navegacion a {
+  display: flex;
+  flex-grow: 1;
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+}
+.section aside {
+  display: flex;
+  flex-direction: row;
+}
+.section aside .publicidad {
+  display: flex;
+  flex-direction: column;
+}
+.section aside .publicidad h4 {
+  background-color: #000;
+  color: #fff;
+  padding: 8px;
+}
+.section aside .publicidad img {
+  width: 100%;
+}
+
+.fondofooter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+  background-color: #000;
+}
+.fondofooter .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 800px) {
+  .fondofooter .footer {
+    align-items: flex-start;
+  }
+}
+.fondofooter .footer .pie {
+  margin: 16px;
+  color: #fff;
+}/*# sourceMappingURL=estilos.css.map */

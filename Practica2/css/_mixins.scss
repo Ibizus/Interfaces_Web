@@ -1,0 +1,39 @@
+@import '_variables.scss';
+/****************** MIXINS ***********************/
+
+@mixin escritorio {
+    @media screen and (min-width: #{$escritorio}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin resetCSS{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+@mixin boton($color1, $color2){
+
+    display: flex;
+    align-self: flex-start;
+
+    background-color: $color1;
+    color: $color_h2_articulos;
+
+    margin: $margen-pequeno 0;
+    padding: $margen-pequeno;
+
+    .boton:hover{
+        background-color: $color2;
+    }
+}
+  
