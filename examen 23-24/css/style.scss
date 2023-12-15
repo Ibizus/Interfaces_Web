@@ -1,0 +1,225 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+*{
+    @include resetCSS;
+    @include generic-text-sizes;
+}
+
+body{
+    font-family: $fuente;
+
+    .contenedor{
+        max-width: $anchoContenido;
+        margin: auto;
+    }
+
+    header {
+        display: flex;
+        color: $color_header;
+        background-image: $bg_header;
+        background-repeat: no-repeat;
+        min-height: 24rem;
+        background-size: cover;
+        background-position: center center;
+
+        .contenido{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            .titulo{
+                margin: $margen-grande 0;
+            }
+            @include tablet{
+                align-items: flex-start;
+            }
+            @include escritorio{
+                align-items: flex-end;
+            }
+        }
+    }
+
+    nav{
+        display: flex;
+        background-color: $bg_nav;
+
+        .menu{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li{
+                margin: $margen-medio;
+            }
+            li ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: $margen-pequeno;
+            }
+            a{
+                color: $color_header;
+            }
+
+            @include tablet{
+
+                flex-direction: row;
+                flex-grow: 1;
+                justify-content: space-between;
+                li ul{
+                    display: none;
+                    position: relative;
+                }
+                ul:hover > ul li ul{
+                    display: block;
+                    position: absolute;
+                    top: 100%;
+                    background-color: yellow;
+                }
+            }
+        }
+    }
+
+    .principal{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; //alinea los elementos de MAS INFORMACION
+
+        .titulo{
+            display: flex;
+            flex-grow: 1;
+            @include tablet{
+            align-self: center;
+            }
+        }
+        .mainYaside{
+            display: flex;
+            flex-direction: column-reverse;
+
+            @include tablet{
+                flex-direction: row;
+                aside{
+                    margin: $margen-pequeno 0;
+                    filter: drop-shadow($sombra);
+                }
+            }
+
+            main{
+                display: flex;
+                flex-direction: column;
+
+                article{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: $bg_article_aside;
+                    margin: $margen-pequeno 0;
+                    img{
+                        width: 100%;
+                        margin-bottom: $margen-pequeno;
+                    }
+                    p{
+                        margin: $margen-medio;
+                    }
+                    span{
+                        color: $colorSpan;
+                    }
+                    .boton{
+                        @include boton($bg_boton1);
+                    }
+                }
+
+                @include tablet{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    flex-grow: 1; // para que main coja el ancho disponible 
+
+                    article{
+                        flex-basis: calc(45% - $margen-pequeno);
+                        filter: drop-shadow($sombra);
+                        margin: $margen-pequeno;
+
+                        p{
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+
+                        @include escritorio{
+                            flex-basis: calc(30% - $margen-pequeno);
+                        }
+                    }
+                }
+            }
+
+            aside{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: $bg_article_aside;
+                padding: $margen-medio;
+                h2{
+                    margin: $margen-medio;
+
+                    @include tablet{
+                        display: flex;
+                        flex-grow: 0;
+                    }
+                }
+                a{
+                    color: $color_texto_oscuro;
+                }
+            }
+        }
+        h2, p{
+            display: flex;
+            flex-grow: 1;
+            margin: $margen-pequeno;
+        }
+        .boton2{
+            @include boton($bg_boton2);
+        }
+    }
+
+    footer {
+        display: flex;
+        background-image: $bg_image_footer;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin-top: 3rem;
+        padding: 2rem 0;
+        min-height: 20rem;
+
+        .footer{
+            display: flex;
+            flex-direction: column;
+            color: $color_footer;
+
+            .widget{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                h3, p{
+                    margin: $margen-pequeno;
+                }
+            }
+
+            @include tablet{
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                .widget{
+                    flex-basis: 25%;
+                }
+
+                @include escritorio{
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}
+
+

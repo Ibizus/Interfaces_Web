@@ -1,0 +1,261 @@
+/***************** VARIABLES ****************/
+/* fuente */
+/* colores */
+/* imagenes */
+/* media queries */
+/* otros */
+/* margenes */
+/****************** MIXINS ***********************/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+* li {
+  list-style-type: none;
+}
+* a {
+  text-decoration: none;
+}
+* h1 {
+  font-size: 2.8rem;
+}
+* h2 {
+  font-size: 1.6rem;
+}
+* h3 {
+  font-size: 1.4rem;
+}
+* p {
+  font-size: 1.2rem;
+}
+* i {
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: "Gothic A1", sans-serif;
+}
+body .contenedor {
+  max-width: 1100px;
+  margin: auto;
+}
+body header {
+  display: flex;
+  color: #ffffff;
+  background-image: url(../img/fondo.jpg);
+  background-repeat: no-repeat;
+  min-height: 24rem;
+  background-size: cover;
+  background-position: center center;
+}
+body header .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+body header .contenido .titulo {
+  margin: 32px 0;
+}
+@media screen and (min-width: 762px) {
+  body header .contenido {
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body header .contenido {
+    align-items: flex-end;
+  }
+}
+body nav {
+  display: flex;
+  background-color: #000000;
+}
+body nav .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body nav .menu li {
+  margin: 16px;
+}
+body nav .menu li ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+}
+body nav .menu a {
+  color: #ffffff;
+}
+@media screen and (min-width: 762px) {
+  body nav .menu {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  body nav .menu li ul {
+    display: none;
+    position: relative;
+  }
+  body nav .menu ul:hover > ul li ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: yellow;
+  }
+}
+body .principal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body .principal .titulo {
+  display: flex;
+  flex-grow: 1;
+}
+@media screen and (min-width: 762px) {
+  body .principal .titulo {
+    align-self: center;
+  }
+}
+body .principal .mainYaside {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 762px) {
+  body .principal .mainYaside {
+    flex-direction: row;
+  }
+  body .principal .mainYaside aside {
+    margin: 8px 0;
+    filter: drop-shadow(5px 5px 5px gray);
+  }
+}
+body .principal .mainYaside main {
+  display: flex;
+  flex-direction: column;
+}
+body .principal .mainYaside main article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  margin: 8px 0;
+}
+body .principal .mainYaside main article img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+body .principal .mainYaside main article p {
+  margin: 16px;
+}
+body .principal .mainYaside main article span {
+  color: #536DFE;
+}
+body .principal .mainYaside main article .boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #455A64;
+  color: #ffffff;
+  filter: drop-shadow(5px 5px 5px gray);
+  padding: 8px;
+  margin: 16px;
+}
+@media screen and (min-width: 762px) {
+  body .principal .mainYaside main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  body .principal .mainYaside main article {
+    flex-basis: calc(45% - 8px);
+    filter: drop-shadow(5px 5px 5px gray);
+    margin: 8px;
+  }
+  body .principal .mainYaside main article p {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 762px) and (min-width: 1024px) {
+  body .principal .mainYaside main article {
+    flex-basis: calc(30% - 8px);
+  }
+}
+body .principal .mainYaside aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f2f2f2;
+  padding: 16px;
+}
+body .principal .mainYaside aside h2 {
+  margin: 16px;
+}
+@media screen and (min-width: 762px) {
+  body .principal .mainYaside aside h2 {
+    display: flex;
+    flex-grow: 0;
+  }
+}
+body .principal .mainYaside aside a {
+  color: #000000;
+}
+body .principal h2, body .principal p {
+  display: flex;
+  flex-grow: 1;
+  margin: 8px;
+}
+body .principal .boton2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #536DFE;
+  color: #ffffff;
+  filter: drop-shadow(5px 5px 5px gray);
+  padding: 8px;
+  margin: 16px;
+}
+body footer {
+  display: flex;
+  background-image: url(../img/contacto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  min-height: 20rem;
+}
+body footer .footer {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+body footer .footer .widget {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body footer .footer .widget h3, body footer .footer .widget p {
+  margin: 8px;
+}
+@media screen and (min-width: 762px) {
+  body footer .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body footer .footer .widget {
+    flex-basis: 25%;
+  }
+}
+@media screen and (min-width: 762px) and (min-width: 1024px) {
+  body footer .footer {
+    justify-content: flex-start;
+  }
+}/*# sourceMappingURL=style.css.map */
